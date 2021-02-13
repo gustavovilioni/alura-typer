@@ -13,3 +13,16 @@ campo.on("input", ()=>{
     $('#contador-palavras').text(palavras)
     $('#contador-caracteres').text(caracteres)
 })
+
+var tempoRestante = $('#tempo-digitacao').text()
+campo.one('focus', ()=>{
+    var idCronometro = setInterval(function(){
+        tempoRestante--
+        $('#tempo-digitacao').text(tempoRestante)
+        console.log(tempoRestante)
+        if (tempoRestante < 1) {
+            campo.attr('disabled', true)
+            clearInterval(idCronometro)
+        }
+    },1000)
+})
