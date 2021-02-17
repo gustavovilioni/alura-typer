@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" href="./css/libs/materialize.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Alura Typer</h1>
-    </header>
-    <main>
-        <p class="frase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat incidunt temporibus laudantium fugiat dicta sint alias neque, architecto perspiciatis porro soluta repudiandae natus! Nemo in sed animi tenetur eius.</p>
-        <ul class="informacoes">
-            <li><span id="tamanho-frase">30</span> palavras</li>
-            <li><span id="tempo-digitacao">3</span> segundos</li>
-        </ul>
+    <div class="container">
+        <header>
+            <h1 class="center">Alura Typer</h1>
+        </header>
+        <main>
+            <p class="frase center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat incidunt temporibus laudantium fugiat dicta sint alias neque, architecto perspiciatis porro soluta repudiandae natus! Nemo in sed animi tenetur eius.</p>
+            <ul class="informacoes center">
+                <li>
+                    <i class="small material-icons icones">description</i>
+                    <span id="tamanho-frase">30</span> palavras</li>
+                <li>
+                    <i class="small material-icons icones">query_builder</i>
+                    <span id="tempo-digitacao">5</span> segundos</li>
+            </ul>
 
-        <textarea class="campo-digitacao" cols="30" rows="10"></textarea>
-        <ul>
-            <li><span id="contador-caracteres">0</span> caracteres</li>
-            <li><span id="contador-palavras">0</span> palavras</li>
-        </ul>
-        <button id='botao'>Reiniciar</button>
-
-    </main>
-
-
+            <textarea class="campo-digitacao" cols="30" rows="10"></textarea>
+            <div class="botoes">
+                <a id='botao' class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">restore</i>
+                </a>
+            </div>
+            <ul class="center">
+                <li><span id="contador-caracteres">0</span> caracteres</li>
+                <li><span id="contador-palavras">0</span> palavras</li>
+            </ul>
+        </main>
     <!-- Seja bem vindo ao curso de jQuery :) -->
+    </div>
 </body>
 <script src="./js/jquery.js"></script>
 <script src="./js/main.js"></script>
